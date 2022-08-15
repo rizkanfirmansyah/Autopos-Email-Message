@@ -1,0 +1,148 @@
+@import 'root';
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: $inter;
+}
+
+#header {
+    height: 250px;
+    background: url('/assets/images/bg.png') 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+
+    img {
+        width: 7.5%;
+        margin: 1.5% 10% 0 10%;
+    }
+}
+
+.body {
+    margin: -10% 10% 0 10%;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.07), 0px 46.233px 36.9864px rgba(0, 0, 0, 0.0348738), 0px 26.4535px 21.1628px rgba(0, 0, 0, 0.0236371), 0px 16.0571px 12.8457px rgba(0, 0, 0, 0.0187401), 0px 9.67509px 7.74008px rgba(0, 0, 0, 0.0166696), 0px 5.38772px 4.31018px rgba(0, 0, 0, 0.0155486), 0px 2.31722px 1.85378px rgba(0, 0, 0, 0.0132495);
+
+    &_message {
+        text-align: center;
+        padding: 20px 0 20px 0;
+
+        &_title {
+            font-weight: map-get($font, "medium");
+            font-size: 42px;
+        }
+
+        &_image {
+            width: 20%;
+            height: 20%;
+        }
+    }
+
+    &_message_text {
+        padding: 5% 10% 2% 10%;
+        font-size: 18px;
+        line-height: 24px;
+        letter-spacing: 0.02em;
+
+        &_to {
+            color: map-get($color, "secondary");
+            font-weight: map-get($font, "regular");
+
+        }
+
+        &_msg {
+            color: map-get($color, "secondary");
+            font-weight: map-get($font, "regular");
+        }
+
+        &_btn{
+            margin: 30px auto;
+            display: block;
+            padding:15px 15px;
+            font-size: 18px;
+            font-weight: map-get($font, "bold");
+            border:2px solid map-get($color, "primary");
+            color: map-get($color, "primary");
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: white;
+        }
+    }
+
+}
+
+.footer{
+    margin:0 10% 0 10%;
+    color: map-get($color, "secondary");
+    
+    &_message_text{
+        margin:10px 5% 50px 5%;
+        opacity: 0.7;
+        text-align: center;
+        font-size: 14px;
+    }
+
+    &_copyright{
+        display: flex;
+        justify-content: space-between;
+
+        &_menu{
+            ul li{
+                float: left;
+                text-decoration: none;
+                list-style: none;
+                margin-right:30px;
+            }
+        }
+
+        &_logo{
+            width: 20%;
+        }
+    }
+}
+@media only screen and (max-width : 670px) {
+    #header {
+        height: 250px;
+        background: url('/assets/images/bg.png') 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+    
+        img {
+            width: 20%;
+            margin: 8% 3% 0 3%;
+        }
+    }
+
+    .body {
+        margin: -40% 2% 0 2%;
+
+        &_message {
+            &_image {
+                width: 50%;
+                height: 50%;
+            }
+        }
+    }
+
+    .footer{
+        &_copyright{
+            display: block;
+    
+            &_menu{
+                padding-bottom: 20px;
+                display: block;
+            }
+    
+            &_logo{
+                width: 40%;
+                margin : 0 auto;
+                margin-top: 40px;
+                display: block;
+            }
+        }
+    }
+}

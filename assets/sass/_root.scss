@@ -1,0 +1,20 @@
+@import url('../fonts/Inter-Regular.ttf');
+$inter : 'Inter',
+sans-serif;
+
+$font : (regular : 400,
+    medium : 500,
+    semibold : 600,
+    bold : 700);
+
+$color : (primary : #FE5D3C,
+    secondary : #808080,
+    light : white,
+    dark : #24272C,
+);
+
+
+
+b {
+    font-weight: map-get($font, "bold");
+}
